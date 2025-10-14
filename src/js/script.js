@@ -311,7 +311,9 @@ checkoutPopupCloseBtn.addEventListener("click", () => {
   document.getElementById("checkout-from-box").style.display = "block";
   document.getElementById("qr-code-box").style.display = "none";
   productCounter.value = 1;
-  document.getElementById("checkout-submit-btn").textContent = "Submit";
+  document.getElementById(
+    "checkout-submit-btn"
+  ).textContent = `Save & Proceed to Payment`;
   document.getElementById("checkout-submit-btn").disabled = false;
 });
 
@@ -1255,14 +1257,6 @@ const districtsByState = {
 document.addEventListener("DOMContentLoaded", () => {
   const stateSelect = document.getElementById("state");
   const districtSelect = document.getElementById("district");
-
-  // Populate states
-  Object.keys(districtsByState).forEach((state) => {
-    const option = document.createElement("option");
-    option.value = state;
-    option.textContent = state;
-    stateSelect.appendChild(option);
-  });
 
   // Handle state change
   stateSelect.addEventListener("change", () => {
