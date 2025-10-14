@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const q = (selector) => form.querySelector(selector);
 
-  // Strict regex patterns
+  // Strict regex patterns --------------
   const fullNameRegex =
     /^[A-Z][a-zA-ZÀ-ÖØ-öø-ÿ' -]{1,}(?: [A-Z][a-zA-ZÀ-ÖØ-öø-ÿ' -]{1,})+$/u;
   const phoneRegex = /^[6-9]\d{9}$/;
@@ -1254,6 +1254,7 @@ const districtsByState = {
     "South Andaman",
   ],
 };
+
 document.addEventListener("DOMContentLoaded", () => {
   const stateSelect = document.getElementById("state");
   const districtSelect = document.getElementById("district");
