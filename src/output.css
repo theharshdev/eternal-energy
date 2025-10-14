@@ -1100,6 +1100,11 @@
       display: grid;
     }
   }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
   .md\:inline-block {
     @media (width >= 48rem) {
       display: inline-block;
