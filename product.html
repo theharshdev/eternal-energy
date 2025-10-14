@@ -28,10 +28,10 @@
     <!-- Checkout popup -->
     <div
       id="checkout-popup"
-      class="fixed hidden top-0 left-0 w-full h-full md:p-8 p-2 bg-black/30 backdrop-blur-2xl z-[9999]"
+      class="fixed hidden top-0 left-0 w-full h-full md:p-8 p-2 bg-black/30 backdrop-blur-2xl z-[9999] justify-center items-center"
     >
       <div
-        class="grid lg:grid-cols-2 gap-8 bg-white md:p-6 p-4 pt-8 rounded-4xl w-full h-full items-start overflow-y-auto relative"
+        class="grid lg:grid-cols-2 gap-8 bg-white md:p-6 p-4 pt-8 rounded-4xl w-full lg:h-fit h-full items-start overflow-y-auto relative max-w-[1400px]"
       >
         <!-- Close button -->
         <button
@@ -104,6 +104,15 @@
             the delivery location. Delivery within Noida and nearby sectors will
             be free.
           </p>
+          <div class="text-center text-sm font-semibold">OR</div>
+          <div class="text-center flex justify-center">
+            <a
+              href="#"
+              class="bg-light-green hover:bg-dark-green transition duration-300 text-white text-sm rounded-4xl py-4 px-12"
+            >
+              Place order via <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </div>
         </div>
         <!-- Form -->
         <div id="checkout-from-box">
@@ -230,7 +239,7 @@
               type="submit"
               class="bg-light-green col-span-2 cursor-pointer w-full text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm mt-2 disabled:cursor-not-allowed disabled:opacity-80"
             >
-              Submit
+              Save & Proceed to Payment <i class="bi bi-arrow-up-right"></i>
             </button>
           </form>
         </div>
@@ -244,10 +253,10 @@
                 class="block w-full scale-105"
               />
             </div>
-            <div class="text-center text-sm my-5 font-medium">OR</div>
+            <div class="text-center text-sm my-5 font-medium lg:hidden">OR</div>
             <a
               href="upi://pay?pa=cnbharsh@ptyes&pn=Harsh%20Kushwaha%20Merchant&tn=Hi%20Harsh&am=296&cu=INR"
-              class="w-full block py-4 px-12 text-white text-sm bg-light-green hover:bg-dark-green duration-300 transition rounded-4xl mt-6 cursor-pointer text-center"
+              class="w-full block py-4 px-12 text-white text-sm bg-light-green hover:bg-dark-green duration-300 transition rounded-4xl mt-6 cursor-pointer text-center lg:hidden"
             >
               Pay now with any UPI App
             </a>
@@ -374,7 +383,8 @@
             >Our Gallery</a
           >
           <a
-            href="#"
+            href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20inquire%20about%20your%20product"
+            target="_blank"
             class="flex gap-1 items-center bg-light-green text-white py-3 px-6 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
           >
             <i class="bi bi-whatsapp"></i>Whatsapp
@@ -596,22 +606,39 @@
             <div
               class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
             >
+              <div class="rounded-4xl overflow-hidden">
+                <iframe
+                  width="100%"
+                  src="https://www.youtube.com/embed/qSUmRSWq3Jc?si=oKu6_FO6XX3Ske94"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="text-sm mt-4">
+                Dr Vichitra, a well known doctor encourages everyone to use
+                cloth bags
+              </p>
+            </div>
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
               <p class="text-sm">
-                I repeatedly have purchased bags from Eternal Energy Foundation.
-                They are doing brilliant work. I have purchased bags in bulk to
-                distribute to various shop keepers, my society residents,
-                neighbours and friends. Keep up the good work!
+                I found the bags extremely useful and have recommended it to
+                many people to purchase and use the bags
               </p>
               <div
                 class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
               >
                 <img
-                  src="./src/images/user01.png"
+                  src="./src/images/user02.png"
                   alt="..."
                   class="aspect-square w-8 rounded-full"
                 />
                 <div>
-                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <p class="text-sm">Mrs Padmini Kumar</p>
                   <div class="text-yellow-400 text-sm flex gap-1 items-center">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -626,21 +653,19 @@
               class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
             >
               <p class="text-sm">
-                I repeatedly have purchased bags from Eternal Energy Foundation.
-                They are doing brilliant work. I have purchased bags in bulk to
-                distribute to various shop keepers, my society residents,
-                neighbours and friends. Keep up the good work!
+                You are doing a great job. Helping out and reaching to so many
+                causes.
               </p>
               <div
                 class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
               >
                 <img
-                  src="./src/images/user01.png"
+                  src="./src/images/user03.png"
                   alt="..."
                   class="aspect-square w-8 rounded-full"
                 />
                 <div>
-                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <p class="text-sm">Manju Jaiswal</p>
                   <div class="text-yellow-400 text-sm flex gap-1 items-center">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -655,50 +680,18 @@
               class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
             >
               <p class="text-sm">
-                I repeatedly have purchased bags from Eternal Energy Foundation.
-                They are doing brilliant work. I have purchased bags in bulk to
-                distribute to various shop keepers, my society residents,
-                neighbours and friends. Keep up the good work!
+                The best part is reuse the bags as many times as possible.
               </p>
               <div
                 class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
               >
                 <img
-                  src="./src/images/user01.png"
+                  src="./src/images/user04.png"
                   alt="..."
                   class="aspect-square w-8 rounded-full"
                 />
                 <div>
-                  <p class="text-sm">Mrs Madhu Sharan</p>
-                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
-            >
-              <p class="text-sm">
-                I repeatedly have purchased bags from Eternal Energy Foundation.
-                They are doing brilliant work. I have purchased bags in bulk to
-                distribute to various shop keepers, my society residents,
-                neighbours and friends. Keep up the good work!
-              </p>
-              <div
-                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
-              >
-                <img
-                  src="./src/images/user01.png"
-                  alt="..."
-                  class="aspect-square w-8 rounded-full"
-                />
-                <div>
-                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <p class="text-sm">Mrs Purnima Gandhi</p>
                   <div class="text-yellow-400 text-sm flex gap-1 items-center">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -1234,10 +1227,12 @@
         <img
           src="./src/images/why-use-img.png"
           alt="..."
-          class="block w-full rounded-4xl border-2 border-zinc-100"
+          class="lg:block hidden w-full rounded-4xl border-2 border-zinc-100"
         />
-        <div class="flex-col flex gap-12 items-start">
-          <h3 class="text-5xl font-semibold font-playfair leading-14">
+        <div class="flex-col flex gap-12 items-start mx-auto">
+          <h3
+            class="md:text-5xl text-3xl font-semibold font-playfair md:leading-14"
+          >
             Why polythene bags? Why not other plastic packaging material?
           </h3>
           <a
@@ -1302,7 +1297,7 @@
             contact@eternalenergy.in
           </p>
           <p class="flex items-center gap-1.5">
-            <i class="bi text-xl bi-telephone"></i> +91-9599244807s
+            <i class="bi text-xl bi-telephone"></i> +91-9599244807
           </p>
           <p class="flex items-center gap-1.5">
             <i class="bi text-xl bi-cursor"></i> Eternal Energy Foundation Noida

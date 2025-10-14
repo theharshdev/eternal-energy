@@ -77,6 +77,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 
 let swiperReview = new Swiper(".mySwiperReview", {
   loop: true,
+  spaceBetween: 20,
   autoplay: {
     delay: 1500,
     disableOnInteraction: false,
@@ -297,6 +298,7 @@ const priceTotal = document.getElementById("price-total");
 orderNowBtn.addEventListener("click", () => {
   body.classList.add("h-dvh", "overflow-hidden");
   checkoutPopup.classList.remove("hidden");
+  checkoutPopup.classList.add("flex");
   productQty.textContent = productCounter.value;
   priceSubtotal.textContent = productCounter.value * 100;
   priceTotal.textContent = productCounter.value * 100;
@@ -305,6 +307,7 @@ orderNowBtn.addEventListener("click", () => {
 checkoutPopupCloseBtn.addEventListener("click", () => {
   body.classList.remove("h-dvh", "overflow-hidden");
   checkoutPopup.classList.add("hidden");
+  checkoutPopup.classList.remove("flex");
   document.getElementById("checkout-from-box").style.display = "block";
   document.getElementById("qr-code-box").style.display = "none";
   productCounter.value = 1;
