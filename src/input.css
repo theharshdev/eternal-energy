@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@theme {
+  --color-dark-green: #013e3f;
+  --color-light-green: #088a8c;
+  --color-dark-white: #fafafa;
+  --color-light-white: #edffff;
+  --font-poppins: "Poppins", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+* {
+  corner-shape: squircle;
+}
+
+.animate-slider {
+  animation: slider 15s linear infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mySwiperTeam .swiper-pagination-progressbar {
+  position: static;
+  margin: 0;
+  transform: translate(0);
+}
+
+.mySwiperTeam .swiper-button-next,
+.mySwiperTeam .swiper-button-prev {
+  position: static;
+  margin: 0;
+  transform: translate(0);
+  width: 40px;
+  font-weight: 600;
+  height: 40px;
+  border: 2px solid #088a8c;
+  border-radius: 300px;
+}
+
+.mySwiperTeam .swiper-button-next::after,
+.mySwiperTeam .swiper-button-prev::after {
+  font-size: 16px;
+  color: #088a8c;
+}
+
+.mySwiperTeam
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill {
+  background-color: #088a8c;
+}
+
+.mySwiperPhotosBox .swiper-button-next,
+.mySwiperPhotosBox .swiper-button-prev {
+  background: white;
+  color: #013e3f;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  border-radius: 400px;
+  align-items: center;
+  font-size: 18px !important;
+  font-weight: 700;
+  border: 2px solid #013e3f;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mySwiperPhotosBox .swiper-button-prev:after {
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.mySwiperPhotosBox .swiper-button-next:after {
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+@media screen and (min-width: 1150px) {
+  .mySwiperPhotosBox .swiper-button-prev {
+    left: -40px;
+  }
+
+  .mySwiperPhotosBox .swiper-button-next {
+    right: -40px;
+  }
+}
+
+.mySwiperReview
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 4px;
+}
+
+.mySwiperReview span.swiper-pagination-bullet {
+  height: 6px;
+  transition: 0.4s;
+}
+
+.mySwiperReview span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 32px;
+  background: #088a8c;
+}
+
+.mySwiper2 .swiper-button-next,
+.mySwiper2 .swiper-button-prev {
+  color: #16b2b4;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

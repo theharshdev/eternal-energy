@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Eternal Energy</title>
+  </head>
+  <body
+    class="bg-white font-poppins overflow-x-hidden text-zinc-800 outline-none"
+  >
+    <!-- Checkout popup -->
+    <div
+      id="checkout-popup"
+      class="fixed hidden top-0 left-0 w-full h-full md:p-8 p-2 bg-black/30 backdrop-blur-2xl z-[9999]"
+    >
+      <div
+        class="grid lg:grid-cols-2 gap-8 bg-white md:p-6 p-4 pt-8 rounded-4xl w-full h-full items-start overflow-y-auto relative"
+      >
+        <!-- Close button -->
+        <button
+          id="checkout-popup-close-btn"
+          type="button"
+          class="absolute md:top-5 md:right-5 top-1 right-3 text-black md:text-2xl text-xl cursor-pointer hover:text-light-green transition duration-300"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <!-- Billing details -->
+        <div class="flex flex-col gap-4 w-full lg:sticky top-0">
+          <div class="flex gap-3 items-start w-full">
+            <img
+              src="./src/images/pdp-1.png"
+              alt=""
+              class="rounded-4xl sm:w-32 w-20"
+            />
+            <div class="flex flex-col md:gap-3 gap-1 w-full">
+              <h3 class="md:text-2xl text-base font-bold font-playfair">
+                Handmade Bags By Destitute Women
+              </h3>
+              <div class="flex gap-4 w-full items-center justify-between">
+                <div>
+                  <p class="md:text-lg text-sm font-semibold">7 Bags</p>
+                  <p class="text-xs">
+                    7 small cloth bags(1-1.5 kilos capacity) <br />
+                    + 1 big cloth bag(10 kilos capacity)
+                  </p>
+                </div>
+                <p class="md:text-2xl text-sm font-bold">₹<span>100</span></p>
+              </div>
+            </div>
+          </div>
+          <span class="w-full h-0.5 bg-zinc-200"></span>
+          <div
+            class="bg-zinc-100 md:p-8 p-3 py-5 rounded-4xl md:text-base text-sm flex-col flex gap-4"
+          >
+            <div class="flex gap-4 justify-between text-end">
+              <p>Quantity</p>
+              <p class="max-w-52">
+                <span id="product-qty" class="font-bold">1</span>
+                <span class="font-light">x</span>
+                <span class="text-xs font-light"
+                  >[ 7 small cloth bags(1-1.5 kilos capacity) + 1 big cloth
+                  bag(10 kilos capacity)]</span
+                >
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <p>Subtotal</p>
+              <p class="font-bold">₹<span id="price-subtotal">100</span></p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <p>Shipping</p>
+              <p class="text-xs text-end">
+                Shipping charges will vary <br />
+                based on the delivery location.
+              </p>
+            </div>
+            <span class="w-full h-0.5 bg-zinc-200"></span>
+            <div class="flex gap-4 justify-between items-center font-bold">
+              <p>Total</p>
+              <p class="text-xl">
+                ₹<span id="price-total">100</span> + Shipping
+              </p>
+            </div>
+          </div>
+          <p class="md:text-sm text-xs max-w-md mx-auto text-center mt-3">
+            <span class="font-bold">Note</span>: Shipping charges will depend on
+            the delivery location. Delivery within Noida and nearby sectors will
+            be free.
+          </p>
+        </div>
+        <!-- Form -->
+        <div id="checkout-from-box">
+          <h3 class="md:text-3xl text-base font-playfair font-bold text-center">
+            Enter your Shipping Address
+          </h3>
+          <form
+            id="checkout-from"
+            action="https://api.web3forms.com/submit"
+            method="post"
+            class="reveal md:grid flex flex-col grid-cols-2 md:gap-4 gap-2 mt-8 text-sm"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="036e4fc3-80bc-4694-b89f-9a9666e906b5"
+            />
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">Full Name</p>
+              <input
+                type="text"
+                name="Full Name"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">Phone Number</p>
+              <input
+                name="Phone Number"
+                type="number"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+            <label class="flex-col flex gap-2 w-full col-span-2">
+              <p class="text-xs">Full Address</p>
+              <textarea
+                type="text"
+                name="Full Address"
+                class="block resize-none bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full h-32"
+              ></textarea>
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">Email Address</p>
+              <input
+                name="Email"
+                type="email"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">Pincode</p>
+              <input
+                name="Pincode"
+                type="number"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">State</p>
+              <select
+                id="state"
+                type="text"
+                name="State"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              >
+                <option value="">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <!-- Union Territories -->
+                <option value="Andaman and Nicobar Islands">
+                  Andaman and Nicobar Islands
+                </option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">
+                  Dadra and Nagar Haveli and Daman and Diu
+                </option>
+                <option value="Delhi">Delhi</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+              </select>
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">City</p>
+              <select
+                id="district"
+                disabled
+                name="City"
+                type="text"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              >
+                <option value="">Select District</option>
+              </select>
+            </label>
+            <button
+              id="checkout-submit-btn"
+              type="submit"
+              class="bg-light-green col-span-2 cursor-pointer w-full text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm mt-2 disabled:cursor-not-allowed disabled:opacity-80"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <!-- QR Code -->
+        <div id="qr-code-box" class="hidden items-center justify-center h-full">
+          <div class="max-w-96">
+            <div class="rounded-4xl border-2 border-zinc-100 overflow-hidden">
+              <img
+                src="./src/images/checkout-qr.png"
+                alt="..."
+                class="block w-full scale-105"
+              />
+            </div>
+            <div class="text-center text-sm my-5 font-medium">OR</div>
+            <a
+              href="upi://pay?pa=cnbharsh@ptyes&pn=Harsh%20Kushwaha%20Merchant&tn=Hi%20Harsh&am=296&cu=INR"
+              class="w-full block py-4 px-12 text-white text-sm bg-light-green hover:bg-dark-green duration-300 transition rounded-4xl mt-6 cursor-pointer text-center"
+            >
+              Pay now with any UPI App
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Animate infinite slider -->
+    <section
+      class="bg-dark-green p-3 overflow-hidden text-sm text-white font-light flex gap-12 items-center relative z-10"
+    >
+      <div class="flex lg:gap-12 md:gap-8 gap-4 items-center animate-slider">
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save the cow!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save environment!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+      </div>
+      <div class="flex lg:gap-12 md:gap-8 gap-4 items-center animate-slider">
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save the cow!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save environment!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 left-0 w-full z-50 bg-white border-b-2 border-zinc-100"
+    >
+      <div
+        class="flex gap-6 justify-between items-center px-4 py-2 max-w-7xl mx-auto"
+      >
+        <!-- Logo -->
+        <a href="./index.html">
+          <img
+            class="block w-16"
+            src="./src/images/main-logo.png"
+            alt="Logo of Eternal Energy"
+          />
+        </a>
+        <!-- Menu -->
+        <div
+          id="menuBox"
+          class="flex lg:static fixed top-0 left-0 lg:w-auto w-full h-full z-50 lg:p-0 p-12 pt-32 lg:flex-row flex-col bg-white gap-6 lg:items-center items-start text-sm font-medium lg:translate-0 -translate-x-[200%] transition duration-500"
+        >
+          <a
+            href="./index.html"
+            class="hover:text-light-green transition duration-300"
+            >Home</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >About</a
+          >
+          <a
+            href="./product.html"
+            class="hover:text-light-green transition duration-300"
+            >Clothes Bags Initiative</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Stray Cattle Feeding</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Media Coverage</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="bg-dark-green lg:hidden text-white py-3 px-6 hover:bg-light-green rounded-4xl transition duration-300 text-sm"
+            >Our Gallery</a
+          >
+          <button
+            id="closeMenuBox"
+            type="button"
+            class="bg-transparent lg:hidden block text-2xl text-dark-green hover:text-light-green transition duration-300 cursor-pointer absolute top-16 right-5"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="flex gap-3 items-center">
+          <a
+            href="#"
+            class="bg-dark-green md:inline-block hidden text-white py-3 px-6 hover:bg-light-green rounded-4xl transition duration-300 text-sm"
+            >Our Gallery</a
+          >
+          <a
+            href="#"
+            class="flex gap-1 items-center bg-light-green text-white py-3 px-6 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
+          >
+            <i class="bi bi-whatsapp"></i>Whatsapp
+          </a>
+          <button
+            id="openMenuBox"
+            type="button"
+            class="bg-transparent lg:hidden block text-4xl text-dark-green hover:text-light-green transition duration-300 cursor-pointer"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- PDP Section -->
+    <section
+      class="grid max-w-7xl mx-auto mt-6 md:grid-cols-2 grid-cols-1 md:gap-12 gap-6 px-4 items-start"
+    >
+      <div class="select-none md:sticky top-28">
+        <div
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+          class="swiper w-full mySwiper2 rounded-4xl overflow-hidden"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-1.png" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-2.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-3.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-4.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-5.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-6.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-7.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-8.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden max-h-[480px]">
+              <img src="./src/images/pdp-9.jpg" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper w-full mt-3 mySwiperProduct">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-1.png" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-2.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-3.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-4.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-5.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-6.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-7.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-8.jpg" />
+            </div>
+            <div class="swiper-slide rounded-4xl overflow-hidden">
+              <img src="./src/images/pdp-9.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-5 flex-col">
+        <h3 class="text-3xl font-bold font-playfair">
+          Handmade Bags By Destitute Women
+        </h3>
+        <p class="flex gap-1 items-center text-sm">
+          <i class="bi bi-star-fill text-base leading-none text-yellow-400"></i
+          ><i class="bi bi-star-fill text-base leading-none text-yellow-400"></i
+          ><i class="bi bi-star-fill text-base leading-none text-yellow-400"></i
+          ><i class="bi bi-star-fill text-base leading-none text-yellow-400"></i
+          ><i class="bi bi-star-fill text-base leading-none text-yellow-400"></i
+          >4.8(24 Reviews)
+        </p>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <img
+              class="w-6 inline-block reveal"
+              src="./src/images/Cloth-Bags-Initiative-img-1.png"
+              alt=""
+            />
+            <h3 class="text-sm reveal">Soft & Reusable Fabric</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              class="w-6 inline-block reveal"
+              src="./src/images/Cloth-Bags-Initiative-img-2.png"
+              alt=""
+            />
+            <h3 class="text-sm reveal">Eco-Friendly and Chemical-Free</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              class="w-6 inline-block reveal"
+              src="./src/images/sopa.png"
+              alt=""
+            />
+            <h3 class="text-sm reveal">Easy to Wash, Easy to Use</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              class="w-6 inline-block reveal"
+              src="./src/images/Cloth-Bags-Initiative-img-3.png"
+              alt=""
+            />
+            <h3 class="text-sm reveal">Supports Reuse and Recycling</h3>
+          </div>
+        </div>
+        <div class="flex gap-2 items-center reveal">
+          <p class="text-4xl font-semibold">₹100</p>
+          <p class="text-lg text-zinc-700 line-through">₹150</p>
+          <p class="text-sm text-white bg-amber-600 rounded-4xl py-2 px-5">
+            Save 40%
+          </p>
+        </div>
+        <p class="text-xl font-medium reveal">Size</p>
+        <div
+          class="bg-light-white p-6 rounded-4xl border border-green-200 lg:max-w-96 reveal"
+        >
+          <p class="text-lg font-semibold">7 Bags</p>
+          <p class="text-sm mt-2">
+            7 small cloth bags(1-1.5 kilos capacity) + 1 big cloth bag(10 kilos
+            capacity)
+          </p>
+        </div>
+        <p class="text-xl font-medium reveal">Quantity</p>
+        <div
+          class="flex text-xl font-semibold border-2 justify-between rounded-4xl border-zinc-100 overflow-hidden bg-white lg:w-fit w-full reveal"
+        >
+          <button
+            id="decreaseCounter"
+            type="button"
+            class="bg-transparent cursor-pointer border-0 outline-0 py-2 px-4 hover:bg-zinc-100 transition duration-300"
+          >
+            -
+          </button>
+          <input
+            id="productCounter"
+            type="text"
+            readonly
+            class="lg:max-w-16 w-full bg-transparent block cursor-auto outline-none border-0 p-2 text-center"
+            value="1"
+          />
+          <button
+            id="increaseCount"
+            type="button"
+            class="bg-transparent cursor-pointer border-0 outline-0 py-2 px-4 hover:bg-zinc-100 transition duration-300"
+          >
+            +
+          </button>
+        </div>
+        <button
+          id="order-now-btn"
+          type="button"
+          class="bg-light-green text-white font-semibold text-sm w-full rounded-4xl border-0 outline-0 flex justify-center items-center gap-2 py-4 hover:bg-dark-green reveal px-8 cursor-pointer"
+        >
+          <i class="bi bi-bag-plus"></i>Order Now
+        </button>
+        <!-- Review slider -->
+        <div class="swiper mySwiperReview w-full select-none pb-[32px] reveal">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
+              <p class="text-sm">
+                I repeatedly have purchased bags from Eternal Energy Foundation.
+                They are doing brilliant work. I have purchased bags in bulk to
+                distribute to various shop keepers, my society residents,
+                neighbours and friends. Keep up the good work!
+              </p>
+              <div
+                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
+              >
+                <img
+                  src="./src/images/user01.png"
+                  alt="..."
+                  class="aspect-square w-8 rounded-full"
+                />
+                <div>
+                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
+              <p class="text-sm">
+                I repeatedly have purchased bags from Eternal Energy Foundation.
+                They are doing brilliant work. I have purchased bags in bulk to
+                distribute to various shop keepers, my society residents,
+                neighbours and friends. Keep up the good work!
+              </p>
+              <div
+                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
+              >
+                <img
+                  src="./src/images/user01.png"
+                  alt="..."
+                  class="aspect-square w-8 rounded-full"
+                />
+                <div>
+                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
+              <p class="text-sm">
+                I repeatedly have purchased bags from Eternal Energy Foundation.
+                They are doing brilliant work. I have purchased bags in bulk to
+                distribute to various shop keepers, my society residents,
+                neighbours and friends. Keep up the good work!
+              </p>
+              <div
+                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
+              >
+                <img
+                  src="./src/images/user01.png"
+                  alt="..."
+                  class="aspect-square w-8 rounded-full"
+                />
+                <div>
+                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
+              <p class="text-sm">
+                I repeatedly have purchased bags from Eternal Energy Foundation.
+                They are doing brilliant work. I have purchased bags in bulk to
+                distribute to various shop keepers, my society residents,
+                neighbours and friends. Keep up the good work!
+              </p>
+              <div
+                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
+              >
+                <img
+                  src="./src/images/user01.png"
+                  alt="..."
+                  class="aspect-square w-8 rounded-full"
+                />
+                <div>
+                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide p-6 rounded-4xl bg-white border-2 border-zinc-100"
+            >
+              <p class="text-sm">
+                I repeatedly have purchased bags from Eternal Energy Foundation.
+                They are doing brilliant work. I have purchased bags in bulk to
+                distribute to various shop keepers, my society residents,
+                neighbours and friends. Keep up the good work!
+              </p>
+              <div
+                class="flex gap-3 items-center w-full pt-4 mt-4 border-t-2 border-zinc-100"
+              >
+                <img
+                  src="./src/images/user01.png"
+                  alt="..."
+                  class="aspect-square w-8 rounded-full"
+                />
+                <div>
+                  <p class="text-sm">Mrs Madhu Sharan</p>
+                  <div class="text-yellow-400 text-sm flex gap-1 items-center">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+          class="rounded-4xl bg-white sm:p-6 p-4 border-2 border-zinc-100 reveal"
+        >
+          <h3 class="text-center text-3xl font-playfair font-bold">
+            Save yourself and your family from micro plastics !
+          </h3>
+          <div
+            class="flex w-full lg:flex-nowrap md:flex-wrap sm:flex-nowrap justify-center flex-wrap gap-4 items-center mt-6"
+          >
+            <img
+              src="./src/images/pdp-page-img-1.png"
+              alt="..."
+              class="block rounded-4xl sm:max-w-40 w-full"
+            />
+            <div>
+              <h3 class="text-base font-semibold">
+                ALERT: Stop Ruining Your Vegetables with Plastic!
+              </h3>
+              <p class="text-sm mt-3">
+                Plastic bags have long been a staple in our kitchens, but the
+                hidden costs to our health and environment are alarming. These
+                bags trap moisture, speeding up spoilage and waste. Worse,
+                harmful microplastics can leach into your fresh produce,
+                affecting the very food you eat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 sm:gap-4 gap-0 items-center sm:p-6 p-4 rounded-4xl border-2 border-zinc-100 reveal"
+        >
+          <p
+            class="lg:text-xl sm:textlg text-sm font-semibold mx-auto px-6 text-center"
+          >
+            Support destitute women!
+          </p>
+          <img
+            src="./src/images/pdp-page-img-2.png"
+            alt="..."
+            class="rounded-4xl"
+          />
+          <img
+            src="./src/images/pdp-page-img-3.png"
+            alt="..."
+            class="rounded-4xl"
+          />
+          <p
+            class="lg:text-xl sm:textlg text-sm font-semibold mx-auto px-6 text-center"
+          >
+            Stop polythene bags usage!
+          </p>
+          <p
+            class="lg:text-xl sm:textlg text-sm font-semibold mx-auto px-6 text-center"
+          >
+            Save the cow!
+          </p>
+          <img
+            src="./src/images/pdp-page-img-4.png"
+            alt="..."
+            class="rounded-4xl"
+          />
+          <img
+            src="./src/images/pdp-page-img-5.png"
+            alt="..."
+            class="rounded-4xl"
+          />
+          <p
+            class="lg:text-xl sm:textlg text-sm font-semibold mx-auto px-6 text-center"
+          >
+            Save environment!
+          </p>
+        </div>
+        <div
+          class="text-center sm:mt-12 mt-8 flex-col flex gap-4 justify-center items-center reveal"
+        >
+          <h3 class="text-3xl font-playfair font-bold mb-4">
+            Contact Information
+          </h3>
+          <p class="text-sm">
+            <span class="font-medium">Mobile No.</span> :
+            <a
+              class="hover:text-light-green transition duration-300"
+              href="tel:+919599244807"
+            >
+              +919599244807
+            </a>
+          </p>
+          <p class="text-sm">
+            <span class="font-medium">Email Id</span> :
+            <a
+              class="hover:text-light-green transition duration-300"
+              href="mailto:contact@eternalenergy.in"
+            >
+              contact@eternalenergy.in
+            </a>
+          </p>
+          <p class="text-sm">You can contact us using this</p>
+        </div>
+      </div>
+    </section>
+    <!-- Please support us -->
+    <section
+      class="bg-gradient-to-r from-light-green to-dark-green py-14 md:py-32 mt-8 md:mt-32 px-4"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-8 items-center"
+      >
+        <div class="flex flex-col items-start md:gap-6 gap-4 text-white">
+          <h3
+            class="text-2xl md:text-5xl font-playfair font-bold md:font-semibold reveal"
+          >
+            Please support us
+          </h3>
+          <p class="text-sm md:text-base font-light reveal">
+            Feeding stray cows and bulls regularly. Celebrate
+            birthdays/anniversaries by feeding fresh fodder to stray cows and
+            bulls.<br />
+            <br />
+            We will do it in your name, family name.
+          </p>
+          <a
+            href="#"
+            class="bg-white text-dark-green hover:text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm reveal"
+          >
+            Donate
+          </a>
+        </div>
+        <img
+          class="block reveal"
+          style="box-shadow: 5px 5px white"
+          src="./src/images/Please-support-us-img.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- Customer Reviews -->
+    <section class="max-w-7xl mx-auto px-4 py-32">
+      <h3 class="text-4xl font-playfair font-semibold">Customer Reviews</h3>
+      <div class="flex gap-6 mt-12 sm:flex-nowrap flex-wrap">
+        <div
+          class="flex sm:flex-col sm:gap-1 gap-4 text-center items-center sm:w-auto w-full justify-center"
+        >
+          <h3 class="text-6xl font-semibold mb-3">5.0</h3>
+          <div class="flex flex-col gap-1">
+            <div
+              class="flex gap-1 items-center md:text-lg text-sm text-yellow-400"
+            >
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-sm">25 reviews</p>
+          </div>
+        </div>
+        <span
+          class="sm:w-0.5 sm:min-w-0.5 w-full sm:h-auto h-0.5 bg-zinc-200 block"
+        ></span>
+        <div class="flex flex-col gap-2 w-full">
+          <div class="flex gap-3 items-center w-full">
+            <p class="text-base font-medium w-3 text-center">5</p>
+            <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            <span
+              class="h-2 rounded-full block sm:max-w-52 w-full bg-zinc-700"
+            ></span>
+            <p class="text-base font-medium w-3 text-center">25</p>
+          </div>
+          <div class="flex gap-3 items-center w-full">
+            <p class="text-base font-medium w-3 text-center">4</p>
+            <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            <span
+              class="h-2 rounded-full block sm:max-w-52 w-full bg-zinc-200"
+            ></span>
+            <p class="text-base font-medium w-3 text-center">0</p>
+          </div>
+          <div class="flex gap-3 items-center w-full">
+            <p class="text-base font-medium w-3 text-center">3</p>
+            <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            <span
+              class="h-2 rounded-full block sm:max-w-52 w-full bg-zinc-200"
+            ></span>
+            <p class="text-base font-medium w-3 text-center">0</p>
+          </div>
+          <div class="flex gap-3 items-center w-full">
+            <p class="text-base font-medium w-3 text-center">2</p>
+            <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            <span
+              class="h-2 rounded-full block sm:max-w-52 w-full bg-zinc-200"
+            ></span>
+            <p class="text-base font-medium w-3 text-center">0</p>
+          </div>
+          <div class="flex gap-3 items-center w-full">
+            <p class="text-base font-medium w-3 text-center">1</p>
+            <i class="bi bi-star-fill text-yellow-400 text-lg"></i>
+            <span
+              class="h-2 rounded-full block sm:max-w-52 w-full bg-zinc-200"
+            ></span>
+            <p class="text-base font-medium w-3 text-center">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 flex gap-4 relative justify-center">
+        <span
+          class="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-b from-transparent pointer-events-none to-white"
+        ></span>
+        <div class="lg:w-1/4 md:w-1/2 sm:w-2/3 w-full flex flex-col gap-4">
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-1.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                Bags purchased in bulk for distribution to shoppers by NGO
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Neerja Shukla</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-5.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                Many shopkeepers slowly switching over to cloth bags!
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Sanjay Verma</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-1/4 md:w-1/2 sm:w-2/3 w-full md:flex hidden flex-col gap-4"
+        >
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-2.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                I find the bags very useful for my customer.
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Pawan Mahto</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                I will recommend these bags to many people
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Dipa</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-7.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                I have sold several hundreds of bags to shopkeepers, residents
+                in my society , relatives and friends. These are bags are the
+                best alternative to polythene bags.
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Deepa chaudhary</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-1/4 md:w-1/2 sm:w-2/3 w-full lg:flex hidden flex-col gap-4"
+        >
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-3.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                One step towards a sustainable and green environment. 🥰 Every
+                contribution, big or small counts. Thank you uncle and Anita
+                aunty for this initiative
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Pushkar Raj Chandna</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-6.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                Little children very eager to change habits
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Gupta and Family</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-1/4 md:w-1/2 sm:w-2/3 w-full lg:flex hidden flex-col gap-4"
+        >
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <img
+              src="./src/images/review-4.png"
+              alt="..."
+              class="block w-full"
+            />
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                Cloth bags purchased by many shops as a safer alternative to
+                Polythene Bags
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Mr Rajeev</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-4xl border-2 border-zinc-100">
+            <div class="p-4 flex-col flex gap-3">
+              <h3 class="text-sm">
+                Lots of advantages of these bags. The most important being it
+                helps the causes of cows, environment and destitute women.
+              </h3>
+              <span class="h-px bg-zinc-100 block w-full"></span>
+              <div class="flex gap-4 justify-between">
+                <div>
+                  <h3 class="text-sm font-medium">Aruna Chakravarty</h3>
+                  <div class="flex gap-1 items-center text-sm text-yellow-400">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-sm">Jul 11, 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center relative z-10">
+        <a
+          href="#"
+          class="bg-light-green cursor-pointer text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm text-center"
+          >See More</a
+        >
+      </div>
+    </section>
+    <!-- DONATE -->
+    <section class="px-4 py-32 bg-dark-white">
+      <div
+        class="max-w-7xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6"
+      >
+        <div
+          class="flex flex-col gap-5 items-center justify-center text-center p-8 rounded-4xl border-2 bg-white border-zinc-100"
+        >
+          <img src="./src/images/Donate-1.png" class="w-20" />
+          <h3 class="text-2xl leading-none font-semibold">DONATE</h3>
+          <p class="text-sm max-w-3/4">
+            Your donation can help thousands of women get a decent livelihood by
+            stitching cloth bags. Every rupee you donate wil make the bag
+            cheaper for people to buy and vendors to give for free.
+          </p>
+          <a
+            href="#"
+            class="block w-full py-4 px-8 rounded-4xl text-white bg-light-green hover:bg-dark-green transition duration-300"
+            >Donate Now</a
+          >
+        </div>
+        <div
+          class="flex flex-col gap-5 items-center justify-center text-center p-8 rounded-4xl border-2 bg-white border-zinc-100"
+        >
+          <img src="./src/images/Donate-2.png" class="w-20" />
+          <h3 class="text-2xl leading-none font-semibold">SPONSOR</h3>
+          <p class="text-sm max-w-3/4">
+            Sponsoring our bags will help us pay destitute women, promote your
+            company, and cross subsidise the bags to sell them at cheaper rates
+            to the retailer.
+          </p>
+          <a
+            href="#"
+            class="block w-full py-4 px-8 rounded-4xl text-white bg-light-green hover:bg-dark-green transition duration-300"
+            >Contact Us</a
+          >
+        </div>
+        <div
+          class="flex flex-col gap-5 items-center justify-center text-center p-8 rounded-4xl border-2 bg-white border-zinc-100"
+        >
+          <img src="./src/images/Donate-3.png" class="w-20" />
+          <h3 class="text-2xl leading-none font-semibold">DONATE</h3>
+          <p class="text-sm max-w-3/4">
+            Volunteer with us.. Spread the word, share. Click below to see how
+            you can volunteer. Our best volunteers get awards, recognition and
+            prizes! Join now!
+          </p>
+          <a
+            href="#"
+            class="block w-full py-4 px-8 rounded-4xl text-white bg-light-green hover:bg-dark-green transition duration-300"
+            >More Info</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Why polythene bags? -->
+    <section class="px-4 py-32 bg-white">
+      <div
+        class="max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 gap-12 items-center"
+      >
+        <img
+          src="./src/images/why-use-img.png"
+          alt="..."
+          class="block w-full rounded-4xl border-2 border-zinc-100"
+        />
+        <div class="flex-col flex gap-12 items-start">
+          <h3 class="text-5xl font-semibold font-playfair leading-14">
+            Why polythene bags? Why not other plastic packaging material?
+          </h3>
+          <a
+            href="#"
+            class="py-4 px-12 rounded-4xl text-white bg-light-green hover:bg-dark-green transition duration-300"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pt-14 lg:pt-32 pb-12 bg-zinc-100 px-4 md:px-0">
+      <div
+        class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 px-4 gap-8 text-[14px]"
+      >
+        <div
+          class="reveal lg:col-span-1 md:col-span-3 col-span-1 lg:text-start text-center"
+        >
+          <img
+            class="inline-block w-20 reveal"
+            src="./src/images/main-logo.png"
+            alt="logo"
+          />
+          <div
+            class="flex gap-4 items-center lg:justify-start justify-center text-xl mt-8 text-dark-green"
+          >
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Our Work</h3>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Celebration of Noida's Earth Heroess
+          </a>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Women empowerment - Cloth bags initiatives
+          </a>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Celebration of Noida's Earth Heroes
+          </a>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Open Hours</h3>
+          <p>Mon-Fri 09:00 - 19:00</p>
+          <p>Sat-Sun 10:00 - 14:00</p>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Reach us</h3>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-envelope-paper"></i>
+            contact@eternalenergy.in
+          </p>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-telephone"></i> +91-9599244807s
+          </p>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-cursor"></i> Eternal Energy Foundation Noida
+            - 201301, India
+          </p>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto flex lg:flex-nowrap flex-wrap lg:justify-between justify-center lg:gap-12 gap-3 text-center md:text-[14px] text-xs mt-12 py-5 border-t-2 border-zinc-300"
+      >
+        <p class="reveal">Copyright © 2025 Eternal Energy Foundations</p>
+        <p class="reveal">Powered by Eternal Energy Foundation</p>
+      </div>
+    </footer>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>

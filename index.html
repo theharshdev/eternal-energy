@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Eternal Energy</title>
+  </head>
+  <body
+    class="bg-white font-poppins overflow-x-hidden text-zinc-800 outline-none"
+  >
+    <!-- Animate infinite slider -->
+    <section
+      class="bg-dark-green p-3 overflow-hidden text-sm text-white font-light flex gap-12 items-center relative z-10"
+    >
+      <div class="flex lg:gap-12 md:gap-8 gap-4 items-center animate-slider">
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save the cow!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save environment!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+      </div>
+      <div class="flex lg:gap-12 md:gap-8 gap-4 items-center animate-slider">
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save the cow!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Save environment!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Support destitute women!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+        <p class="whitespace-nowrap shrink-0">Stop polythene bags usage!</p>
+        <i
+          class="bi bi-asterisk text-xs inline-block animate-spin duration-1000"
+        ></i>
+      </div>
+    </section>
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 left-0 w-full z-50 bg-white border-b-2 border-zinc-100"
+    >
+      <div
+        class="flex gap-6 justify-between items-center px-4 py-2 max-w-7xl mx-auto"
+      >
+        <!-- Logo -->
+        <a href="./index.html">
+          <img
+            class="block w-16"
+            src="./src/images/main-logo.png"
+            alt="Logo of Eternal Energy"
+          />
+        </a>
+        <!-- Menu -->
+        <div
+          id="menuBox"
+          class="flex lg:static fixed top-0 left-0 lg:w-auto w-full h-full z-50 lg:p-0 p-12 pt-32 lg:flex-row flex-col bg-white gap-6 lg:items-center items-start text-sm font-medium lg:translate-0 -translate-x-[200%] transition duration-500"
+        >
+          <a
+            href="./index.html"
+            class="hover:text-light-green transition duration-300"
+            >Home</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >About</a
+          >
+          <a
+            href="./product.html"
+            class="hover:text-light-green transition duration-300"
+            >Clothes Bags Initiative</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Stray Cattle Feeding</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Media Coverage</a
+          >
+          <a href="#" class="hover:text-light-green transition duration-300"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="bg-dark-green lg:hidden text-white py-3 px-6 hover:bg-light-green rounded-4xl transition duration-300 text-sm"
+            >Our Gallery</a
+          >
+          <button
+            id="closeMenuBox"
+            type="button"
+            class="bg-transparent lg:hidden block text-2xl text-dark-green hover:text-light-green transition duration-300 cursor-pointer absolute top-16 right-5"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="flex gap-3 items-center">
+          <a
+            href="#"
+            class="bg-dark-green md:inline-block hidden text-white py-3 px-6 hover:bg-light-green rounded-4xl transition duration-300 text-sm"
+            >Our Gallery</a
+          >
+          <a
+            href="#"
+            class="flex gap-1 items-center bg-light-green text-white py-3 px-6 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
+          >
+            <i class="bi bi-whatsapp"></i>Whatsapp
+          </a>
+          <button
+            id="openMenuBox"
+            type="button"
+            class="bg-transparent lg:hidden block text-4xl text-dark-green hover:text-light-green transition duration-300 cursor-pointer"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero banner slider -->
+    <section>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="h-[50dvh] md:h-[84dvh] flex items-center">
+              <img
+                class="block absolute top-0 left-0 w-full h-full object-cover"
+                src="./src/images/hero-banner-slider-img-1.png"
+                alt="image of a cow Feeding"
+              />
+              <div
+                class="bg-gradient-to-r from-black/50 via-transparent to-transparent text-white w-full relative z-10 py-12 reveal"
+              >
+                <div class="max-w-7xl mx-auto">
+                  <div class="max-w-lg px-4">
+                    <h3
+                      class="text-2xl md:text-5xl font-playfair font-semibold"
+                    >
+                      Stray Cattle Feeding
+                    </h3>
+                    <p class="md:text-lg text-sm mt-8 font-light">
+                      Celebrate birthdays/anniversaries by feeding fresh fodder
+                      to stray cows and bulls. We will do it in your name,
+                      family name.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-[50dvh] md:h-[84dvh] flex items-center">
+              <img
+                class="block absolute top-0 left-0 w-full h-full object-cover"
+                src="./src/images/hero-banner-slider-img-2.png"
+                alt="image of a cow Feeding"
+              />
+              <div
+                class="bg-gradient-to-r from-black/50 via-transparent to-transparent text-white w-full relative z-10 py-12 reveal"
+              >
+                <div class="max-w-7xl mx-auto">
+                  <div class="max-w-lg px-4">
+                    <h3
+                      class="text-2xl md:text-5xl font-playfair font-semibold"
+                    >
+                      Cloth Bag Bank
+                    </h3>
+                    <p class="md:text-lg text-sm mt-8 font-light">
+                      Noida's largest cloth bag project which provides an
+                      alternate source of income to destitute women and also a
+                      sustainable alternative to polythene bags.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="h-[50dvh] md:h-[84dvh] flex items-center">
+              <img
+                class="block absolute top-0 left-0 w-full h-full object-cover"
+                src="./src/images/hero-banner-slider-img-3.png"
+                alt="image of a cow Feeding"
+              />
+              <div
+                class="bg-gradient-to-r from-black/50 via-transparent to-transparent text-white w-full relative z-10 py-12 reveal"
+              >
+                <div class="max-w-7xl mx-auto">
+                  <div class="max-w-lg px-4">
+                    <h3
+                      class="md:text-5xl text-2xl font-playfair font-semibold"
+                    >
+                      Kids Education
+                    </h3>
+                    <p class="md:text-lg text-sm mt-8 font-light">
+                      Volunteer or sponsor kids education. Informal teaching to
+                      destitute kids with nutritious snacks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Committed to Welfare -->
+    <section
+      class="max-w-7xl mx-auto pt-8 md:pt-32 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 px-4"
+    >
+      <div class="grid grid-cols-3 md:gap-8 gap-3 items-center w-full">
+        <img
+          class="rounded-4xl block w-full reveal"
+          src="./src/images/Committed-to-Welfare-img-1.png"
+        />
+        <img
+          class="rounded-4xl block w-full reveal mt-12"
+          src="./src/images/Committed-to-Welfare-img-2.png"
+        />
+        <img
+          class="rounded-4xl block w-full reveal"
+          src="./src/images/Committed-to-Welfare-img-3.png"
+        />
+      </div>
+      <div class="flex flex-col items-start md:gap-6 md:mt-8 justify-center">
+        <h3
+          class="text-lg md:text-5xl md:font-semibold font-bold font-playfair reveal"
+        >
+          Committed to Welfare of Society, Animals and Environment
+        </h3>
+        <p class="text-base reveal">
+          Eternal Energy Foundation is a registered Public Charitable Trust, Was
+          registered in October, 2000. <br /><br />
+          We have been awarded by Noida Authority for exceptional work during
+          the Covid period when more than 3500 families were provided groceries.
+        </p>
+        <a
+          href="#"
+          class="bg-light-green reveal text-white py-3 px-6 hover:bg-dark-green rounded-4xl transition duration-300 text-sm mt-6 md:mt-0"
+          >Know More</a
+        >
+      </div>
+    </section>
+    <!-- Our Score -->
+    <section class="bg-dark-green mt-8 md:mt-32">
+      <div
+        class="max-w-7xl mx-auto py-8 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-20 px-4 text-white"
+      >
+        <div>
+          <h3 class="md:text-6xl text-4xl font-bold font-playfair reveal">
+            <span class="count">100</span>+
+          </h3>
+          <p class="text-sm mt-4 font-light reveal">
+            Stray Cattle feeding everyday
+          </p>
+        </div>
+        <div>
+          <h3 class="md:text-6xl text-4xl font-bold font-playfair reveal">
+            <span class="count">10,000</span>+
+          </h3>
+          <p class="text-sm mt-4 font-light reveal">Cloth Bags Distributed</p>
+        </div>
+        <div>
+          <h3 class="md:text-6xl text-4xl font-bold font-playfair reveal">
+            <span class="count">3,500</span>+
+          </h3>
+          <p class="text-sm mt-4 font-light reveal">
+            Families provided groceries during COVID
+          </p>
+        </div>
+        <div>
+          <h3 class="md:text-6xl text-4xl font-bold font-playfair reveal">
+            <span class="count">100</span>+
+          </h3>
+          <p class="text-sm mt-4 font-light reveal">
+            Destitute women supported
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Cloth Bags Initiative -->
+    <section
+      class="max-w-7xl mx-auto pt-8 md:pt-32 grid md:grid-cols-2 grid-cols-1 md:gap-12 items-center gap-10 px-4"
+    >
+      <img
+        class="rounded-4xl object-cover w-full reveal max-h-[450px]"
+        src="./src/images/Cloth-Bags-Initiative-img.png"
+      />
+      <div class="col-span-1 flex flex-col items-start gap-8">
+        <div>
+          <h3
+            class="text-2xl md:text-5xl md:font-semibold font-bold font-playfair reveal"
+          >
+            Cloth Bags Initiative
+          </h3>
+          <p class="text-base reveal mt-4">
+            Handmade by destitute women. A win-win situation:
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <img
+            class="w-16 inline-block reveal"
+            src="./src/images/Cloth-Bags-Initiative-img-1.png"
+            alt=""
+          />
+          <div>
+            <h3 class="text-base md:text-xl font-semibold reveal">
+              Reusable Polyester Fabric
+            </h3>
+            <p class="text-sm md:text-base font-light mt-2 reveal">
+              Skin Friendly, Hypoallergenic, Odor Free
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <img
+            class="w-16 inline-block reveal"
+            src="./src/images/Cloth-Bags-Initiative-img-2.png"
+            alt=""
+          />
+          <div>
+            <h3 class="text-base md:text-xl font-semibold reveal">
+              Eco Friendly
+            </h3>
+            <p class="text-sm md:text-base font-light mt-2 reveal">
+              No Harmful Chemicals and Plastic
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <img
+            class="w-16 inline-block reveal"
+            src="./src/images/Cloth-Bags-Initiative-img-3.png"
+            alt=""
+          />
+          <div>
+            <h3 class="text-base md:text-xl font-semibold reveal">
+              Reuse - Recycle
+            </h3>
+            <p class="text-sm md:text-base font-light mt-2 reveal">
+              Washable, Use Multiple Times
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="bg-light-green reveal inline-block text-white py-3 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
+          >Buy Now</a
+        >
+      </div>
+    </section>
+    <!-- Our Works -->
+    <section class="py-8 md:py-32 mt-8 md:mt-32 bg-dark-white px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-xl mx-auto text-center reveal">
+          <h3
+            class="text-2xl md:text-5xl font-bold md:font-semibold font-playfair"
+          >
+            Our Works
+          </h3>
+          <p class="text-base md:text-lg mt-4">
+            We are a group of responsible citizens who have come together to
+            work for community animals, environment and the needy.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:gap-8 gap-3 mt-20"
+        >
+          <!-- Work card -->
+          <div
+            class="bg-white rounded-4xl p-5 shadow-md shadow-black/5 hover:scale-110 hover:shadow-2xl text-center flex flex-col justify-between gap-4 reveal"
+          >
+            <div class="flex flex-col gap-4">
+              <img
+                class="block rounded-4xl"
+                src="./src/images/our-work-img-1.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold">COVID Period Works</h3>
+              <p class="text-sm">
+                We distributed groceries to over 3500 families during the first
+                lockdown period. During the second lockdown period, we helped
+                hundreds of patients with hospital beds, Oxygen cylinders, masks
+                etc.
+              </p>
+            </div>
+            <a
+              href="#"
+              class="bg-light-green text-white py-3 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm block w-full"
+              >Know More</a
+            >
+          </div>
+          <!-- Work card -->
+          <div
+            class="bg-white rounded-4xl p-5 shadow-md shadow-black/5 hover:scale-110 hover:shadow-2xl text-center flex flex-col justify-between gap-4 reveal"
+          >
+            <div class="flex-col flex gap-4">
+              <img
+                class="block rounded-4xl"
+                src="./src/images/our-work-img-2.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold">
+                Fresh Fodder to Stray Cattle
+              </h3>
+              <p class="text-sm">
+                We feed approximately 100+ stray cattle fresh fodder (chara) in
+                almost all parts of Noida and Noida extension.
+              </p>
+            </div>
+            <a
+              href="#"
+              class="bg-light-green text-white py-3 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm block w-full"
+              >Know More</a
+            >
+          </div>
+          <!-- Work card -->
+          <div
+            class="bg-white rounded-4xl p-5 shadow-md shadow-black/5 hover:scale-110 hover:shadow-2xl text-center flex flex-col justify-between gap-4 reveal"
+          >
+            <div class="flex flex-col gap-4">
+              <img
+                class="block rounded-4xl"
+                src="./src/images/our-work-img-3.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold">Cloth Bags Initiative</h3>
+              <p class="text-sm">
+                This is a self sustainable project where women are empowered.
+                They are provided with sewing machines and cloth bags are
+                stitched as a safer alternative to banned polythene bags.
+              </p>
+            </div>
+            <a
+              href="#"
+              class="bg-light-green text-white py-3 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm block w-full"
+              >Know More</a
+            >
+          </div>
+          <!-- Work card -->
+          <div
+            class="bg-white rounded-4xl p-5 shadow-md shadow-black/5 hover:scale-110 hover:shadow-2xl text-center flex flex-col justify-between gap-4 reveal"
+          >
+            <div class="flex flex-col gap-4">
+              <img
+                class="block rounded-4xl"
+                src="./src/images/our-work-img-3.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold">Kids Education</h3>
+              <p class="text-sm">
+                Destitute kids provided FREE tuition classes where the teacher
+                is a topper in school/college and a destitute himself/herself!
+              </p>
+            </div>
+            <a
+              href="#"
+              class="bg-light-green text-white py-3 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm block w-full"
+              >Know More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Whatsapp Us Today To Know More -->
+    <section class="max-w-7xl mx-auto mt-8 md:mt-32 px-4">
+      <div
+        class="rounded-[50px] bg-light-green py-8 px-6 md:p-20 relative overflow-hidden reveal"
+      >
+        <img
+          class="absolute top-0 left-0 w-full h-full object-cover brightness-50"
+          src="./src/images/contact-banner-bg-img.png"
+          alt=""
+        />
+        <div
+          class="relative z-10 flex flex-col gap-6 items-center justify-center text-center"
+        >
+          <h3
+            class="text-2xl md:text-6xl text-white font-bold md:font-normal font-playfair"
+          >
+            Whatsapp Us Today To Know More
+          </h3>
+          <p class="text-sm md:text-2xl text-white font-extralight">
+            A CSR certified, Working for community animals, environment and
+            destitute women.
+          </p>
+          <a
+            href="#"
+            class="bg-dark-white text-black hover:text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm block"
+            >Whatsapp: 9599244807</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Our Works -->
+    <section
+      class="py-14 mt-12 md:py-32 md:mt-32 bg-dark-green px-4 text-white"
+    >
+      <div class="max-w-7xl mx-auto flex flex-col items-center justify-center">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <h3
+            class="text-2xl md:text-5xl font-bold md:font-semibold font-playfair reveal"
+          >
+            Success Stories
+          </h3>
+          <p class="text-sm md:text-lg mt-4 font-extralight reveal">
+            From Feeding animals to empowered women, our work creates lasting
+            change. These stories are a testament to what we can achieve
+            together.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:mt-20 mt-12">
+          <img
+            class="block rounded-4xl reveal"
+            src="./src/images/our-stories-img-1.png"
+            alt=""
+          />
+          <img
+            class="block rounded-4xl reveal"
+            src="./src/images/our-stories-img-2.png"
+            alt=""
+          />
+          <img
+            class="block rounded-4xl reveal"
+            src="./src/images/our-stories-img-3.png"
+            alt=""
+          />
+        </div>
+        <a
+          href="#"
+          class="bg-dark-white text-black hover:text-white py-4 px-16 hover:bg-light-green rounded-4xl transition duration-300 text-sm inline-block mx-auto mt-12 reveal"
+          >Read More Stories</a
+        >
+      </div>
+    </section>
+    <!-- Our Team -->
+    <section class="py-14 md:py-32 bg-dark-white">
+      <div
+        class="max-w-7xl px-4 mx-auto grid grid-cols-1 md:grid-cols-5 gap-12"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <h3
+            class="text-2xl md:text-5xl md:font-semibold font-bold font-playfair reveal"
+          >
+            Our Team
+          </h3>
+          <p class="text-sm md:text-lg mt-4 reveal">
+            Behind every initiative is a team of dedicated volunteers and
+            leaders, working tirelessly to protect animals, preserve nature, and
+            empower communities
+          </p>
+          <a
+            href="#"
+            class="bg-light-green text-white py-4 px-10 hover:bg-dark-green rounded-4xl transition duration-300 text-sm inline-block mx-auto mt-4 md:mt-12 reveal"
+            >View All</a
+          >
+        </div>
+        <div class="col-span-1 md:col-span-3">
+          <div class="swiper mySwiperTeam">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="block"
+                  src="./src/images/team-memeber-img-1.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-medium mt-2">Jayanthi R. Iyengar</h3>
+                <p class="text-sm font-light">Managing Trustee</p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block"
+                  src="./src/images/team-memeber-img-2.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-medium mt-2">Sonali Tituss</h3>
+                <p class="text-sm font-light">Secretarys</p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block"
+                  src="./src/images/team-memeber-img-3.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-medium mt-2">Simran Bhatia</h3>
+                <p class="text-sm font-light">Jt Secretarys</p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block"
+                  src="./src/images/team-memeber-img-4.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-medium mt-2">Shyam Sunder Gupta</h3>
+                <p class="text-sm font-light">Treasurer</p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block"
+                  src="./src/images/team-memeber-img-5.png"
+                  alt=""
+                />
+                <h3 class="text-lg font-medium mt-2">Padmini Kumar</h3>
+                <p class="text-sm font-light">Advisor</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full mt-5">
+              <div class="swiper-pagination"></div>
+              <div class="flex gap-2 items-center">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Certificate of Appreciation -->
+    <section
+      class="max-w-7xl px-4 mx-auto pt-14 md:pt-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+    >
+      <h3
+        class="text-2xl md:text-5xl md:font-semibold font-bold font-playfair reveal"
+      >
+        Certificate of Appreciation
+      </h3>
+      <div class="grid grid-cols-2 gap-8 items-center">
+        <img class="block reveal" src="./src/images/certificate-1.png" alt="" />
+        <img class="block reveal" src="./src/images/certificate-2.png" alt="" />
+      </div>
+    </section>
+    <!-- Check Our Gallery -->
+    <section class="mt-14 md:mt-32 text-white">
+      <div class="bg-dark-green pt-14 md:pt-32 pb-20">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <h3
+            class="text-2xl md:text-5xl font-bold md:font-semibold font-playfair reveal"
+          >
+            Check Our Gallery
+          </h3>
+          <p
+            class="text-sm md:text-lg mt-4 px-4 md:px-0 font-extralight reveal"
+          >
+            Explore the moments that define our journey — each image capturing
+            the spirit, dedication, and impact of our work.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-dark-green"></div>
+        <div
+          class="max-w-5xl px-4 mx-auto flex flex-col items-center justify-center relative z-10 mySwiperPhotosBox"
+        >
+          <div class="swiper-button-prev"></div>
+          <div class="swiper mySwiperPhotos w-full h-80 select-none">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-3.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-4.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-6.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-8.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-9.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-10.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-11.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-12.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-13.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="block w-full rounded-4xl object-cover h-full"
+                  src="./src/images/gallery-img-14.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8 md:mt-20 reveal">
+        <a
+          href="#"
+          class="bg-light-green text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
+        >
+          View All Images
+        </a>
+      </div>
+    </section>
+    <!-- Our Welfare Projects -->
+    <section
+      class="mt-14 md:mt-32 max-w-7xl px-4 mx-auto grid grid-cols-5 gap-12 items-center"
+    >
+      <div class="md:col-span-3 col-span-5 flex flex-col gap-6 items-start">
+        <p
+          class="bg-light-white py-2 px-3 rounded-4xl reveal md:text-sm text-xs"
+        >
+          Your contribution can bring real change.
+        </p>
+        <h3
+          class="font-playfair text-2xl md:text-5xl font-bold md:font-semibold reveal"
+        >
+          Our Welfare Projects
+        </h3>
+        <p class="text-sm max-w-lg reveal">
+          Help us uplift destitute women, protect innocent animals, reduce
+          plastic pollution, and create a greener, healthier planet. Every
+          donation supports meaningful actions that impact lives and safeguard
+          our future.
+        </p>
+        <div class="flex flex-col gap-4 text-sm reveal">
+          <div class="flex gap-1.5 items-center">
+            <img src="./src/images/check.png" alt="..." class="w-5" />
+            <p>Support destitute women!</p>
+          </div>
+          <div class="flex gap-1.5 items-center">
+            <img src="./src/images/check.png" alt="..." class="w-5" />
+            <p>Stop polythene bags usage!</p>
+          </div>
+          <div class="flex gap-1.5 items-center">
+            <img src="./src/images/check.png" alt="..." class="w-5" />
+            <p>Save the cow!</p>
+          </div>
+          <div class="flex gap-1.5 items-center">
+            <img src="./src/images/check.png" alt="..." class="w-5" />
+            <p>Save environment!</p>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-2 col-span-5 flex flex-col items-center reveal">
+        <p class="bg-dark-green text-white text-xs py-1 px-3 relative z-10">
+          DONATE NOW
+        </p>
+        <img
+          class="block w-full object-contain -mt-3"
+          src="./src/images/QR-code.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- Please support us -->
+    <section
+      class="bg-gradient-to-r from-light-green to-dark-green py-14 md:py-32 mt-8 md:mt-32 px-4"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-8 items-center"
+      >
+        <div class="flex flex-col items-start md:gap-6 gap-2 text-white">
+          <h3
+            class="text-2xl md:text-5xl font-playfair font-bold md:font-semibold reveal"
+          >
+            Please support us
+          </h3>
+          <p class="text-sm md:text-base font-light reveal">
+            Feeding stray cows and bulls regularly. Celebrate
+            birthdays/anniversaries by feeding fresh fodder to stray cows and
+            bulls.<br />
+            <br />
+            We will do it in your name, family name.
+          </p>
+          <a
+            href="#"
+            class="bg-white text-dark-green hover:text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm reveal"
+          >
+            Donate
+          </a>
+        </div>
+        <img
+          class="block reveal"
+          style="box-shadow: 5px 5px white"
+          src="./src/images/Please-support-us-img.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- Volunteer with Us! -->
+    <section class="bg-dark-white py-14 md:py-32 px-4">
+      <div
+        class="lg:max-w-7xl max-w-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20 items-center"
+      >
+        <div class="font-playfair font-semibold">
+          <p class="text-sm md:text-xl reveal">Eternal Energy Foundation</p>
+          <h3
+            class="text-2xl md:text-5xl font-bold md:font-semibold mt-6 md:leading-14 reveal"
+          >
+            Work for Animals, Environment and Community
+          </h3>
+        </div>
+        <form
+          id="form-contact"
+          action="https://api.web3forms.com/submit"
+          method="post"
+          class="p-4 md:p-10 rounded-4xl reveal bg-[#F7FAFC] border-2 border-zinc-100 flex-col flex gap-4 items-center"
+        >
+          <h3 class="text-xl font-semibold font-playfair">
+            Volunteer with Us!
+          </h3>
+          <input
+            type="hidden"
+            name="access_key"
+            value="036e4fc3-80bc-4694-b89f-9a9666e906b5"
+          />
+          <div class="flex gap-4 w-full sm:flex-nowrap flex-wrap">
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">First Name</p>
+              <input
+                type="text"
+                name="First Name"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+            <label class="flex-col flex gap-2 w-full">
+              <p class="text-xs">Last Name</p>
+              <input
+                name="Last Name"
+                type="text"
+                class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+              />
+            </label>
+          </div>
+          <label class="flex-col flex gap-2 w-full">
+            <p class="text-xs">Phone Number</p>
+            <input
+              name="Phone Number"
+              type="number"
+              class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+            />
+          </label>
+          <label class="flex-col flex gap-2 w-full">
+            <p class="text-xs">Email Address</p>
+            <input
+              name="Email"
+              type="email"
+              class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full"
+            />
+          </label>
+          <label class="flex-col flex gap-2 w-full">
+            <p class="text-xs">Message</p>
+            <textarea
+              name="Message"
+              class="block bg-white rounded-4xl border-2 border-zinc-100 p-3 outline-none focus:border-light-green w-full min-h-32"
+            ></textarea>
+          </label>
+          <button
+            type="submit"
+            class="bg-light-green cursor-pointer w-full text-white py-4 px-16 hover:bg-dark-green rounded-4xl transition duration-300 text-sm"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pt-14 lg:pt-32 pb-12 bg-zinc-100 px-4 md:px-0">
+      <div
+        class="max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 px-4 gap-8 text-[14px]"
+      >
+        <div
+          class="reveal lg:col-span-1 md:col-span-3 col-span-1 lg:text-start text-center"
+        >
+          <img
+            class="inline-block w-20 reveal"
+            src="./src/images/main-logo.png"
+            alt="logo"
+          />
+          <div
+            class="flex gap-4 items-center lg:justify-start justify-center text-xl mt-8 text-dark-green"
+          >
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-light-green transition duration-300"
+              ><i class="bi bi-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Our Work</h3>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Celebration of Noida's Earth Heroess
+          </a>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Women empowerment - Cloth bags initiatives
+          </a>
+          <a href="#" class="hover:text-light-green transition duration-300">
+            Celebration of Noida's Earth Heroes
+          </a>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Open Hours</h3>
+          <p>Mon-Fri 09:00 - 19:00</p>
+          <p>Sat-Sun 10:00 - 14:00</p>
+        </div>
+        <div class="flex flex-col md:gap-4 gap-3 reveal">
+          <h3 class="text-lg">Reach us</h3>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-envelope-paper"></i>
+            contact@eternalenergy.in
+          </p>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-telephone"></i> +91-9599244807s
+          </p>
+          <p class="flex items-center gap-1.5">
+            <i class="bi text-xl bi-cursor"></i> Eternal Energy Foundation Noida
+            - 201301, India
+          </p>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto flex lg:flex-nowrap flex-wrap lg:justify-between justify-center lg:gap-12 gap-3 text-center md:text-[14px] text-xs mt-12 py-5 border-t-2 border-zinc-300"
+      >
+        <p class="reveal">Copyright © 2025 Eternal Energy Foundations</p>
+        <p class="reveal">Powered by Eternal Energy Foundation</p>
+      </div>
+    </footer>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
