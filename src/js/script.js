@@ -294,6 +294,7 @@ const checkoutPopupCloseBtn = document.getElementById(
 const productQty = document.getElementById("product-qty");
 const priceSubtotal = document.getElementById("price-subtotal");
 const priceTotal = document.getElementById("price-total");
+const checkoutUpiBtn = document.getElementById("checkout-upi-btn");
 
 orderNowBtn.addEventListener("click", () => {
   body.classList.add("h-dvh", "overflow-hidden");
@@ -302,6 +303,12 @@ orderNowBtn.addEventListener("click", () => {
   productQty.textContent = productCounter.value;
   priceSubtotal.textContent = productCounter.value * 100;
   priceTotal.textContent = productCounter.value * 100;
+  checkoutUpiBtn.setAttribute(
+    "href",
+    `upi://pay?pa=9599244807@ybl&pn=Eternal%20Enery%20Foundation&tn=&am=${
+      productCounter.value * 100
+    }&cu=INR`
+  );
 });
 
 checkoutPopupCloseBtn.addEventListener("click", () => {
@@ -1106,6 +1113,7 @@ const districtsByState = {
     "Mirzapur",
     "Moradabad",
     "Muzaffarnagar",
+    "Noida",
     "Pilibhit",
     "Pratapgarh",
     "Prayagraj",
@@ -1281,3 +1289,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Applying shipping free or chargable -------------
+const districtInput = document.getElementById("district");
+const shippingText = document.getElementById("shippingText");
+const shippingText2 = document.getElementById("shippingText2");
+
+districtInput.addEventListener("change", () => {
+  if (districtInput.value === "Noida") {
+    shippingText.textContent = "0₹ (Shipping will be free for Noida)";
+    shippingText2.style.display = "none";
+  } else {
+    shippingText.textContent =
+      "Shipping charges will vary based on the delivery location.";
+    shippingText2.style.display = "block";
+  }
+});
