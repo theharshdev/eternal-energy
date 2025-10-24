@@ -334,8 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const q = (selector) => form.querySelector(selector);
 
   // Strict regex patterns --------------
-  const fullNameRegex =
-    /^[A-Z][a-zA-ZÀ-ÖØ-öø-ÿ' -]{1,}(?: [A-Z][a-zA-ZÀ-ÖØ-öø-ÿ' -]{1,})+$/u;
+  const nameRegex = /^[a-zA-Z ]{3,}$/i;
   const phoneRegex = /^[6-9]\d{9}$/;
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   const pincodeRegex = /^\d{6}$/;
@@ -344,8 +343,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const fields = {
     fullName: {
       el: q('input[name="Full Name"]'),
-      regex: fullNameRegex,
-      msg: "Enter your full name (first & last, letters only).",
+      regex: nameRegex,
+      msg: "Enter a valid name (min 3 chars).",
     },
     phone: {
       el: q('input[name="Phone Number"]'),
@@ -1289,18 +1288,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Applying shipping free or chargable -------------
-const districtInput = document.getElementById("district");
-const shippingText = document.getElementById("shippingText");
-const shippingText2 = document.getElementById("shippingText2");
-
-districtInput.addEventListener("change", () => {
-  if (districtInput.value === "Noida") {
-    shippingText.textContent = "0₹ (Shipping will be free for Noida)";
-    shippingText2.style.display = "none";
-  } else {
-    shippingText.textContent =
-      "Shipping charges will vary based on the delivery location.";
-    shippingText2.style.display = "block";
-  }
-});
