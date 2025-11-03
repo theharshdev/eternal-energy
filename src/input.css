@@ -186,6 +186,7 @@ button[onclick*="product-hindi.html"]:hover {
   background: #013e3f;
 }
 
+/* Style for translate button parent paragraph */
 p:has(> button[onclick*="product-hindi.html"]) {
   max-width: 80rem;
   padding: 0 1rem;
