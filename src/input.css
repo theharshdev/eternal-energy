@@ -167,3 +167,27 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+/* Style for translate button */
+button[onclick*="product-hindi.html"] {
+  cursor: pointer;
+  border-radius: 32px;
+  outline: none;
+  border: none !important;
+  background: #088a8c;
+  color: white;
+  padding: 12px 32px !important;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Style for translate button */
+button[onclick*="product-hindi.html"]:hover {
+  background: #013e3f;
+}
+
+p:has(> button[onclick*="product-hindi.html"]) {
+  max-width: 80rem;
+  padding: 0 1rem;
+  margin: 20px auto !important;
+}
