@@ -1,0 +1,101 @@
+
+.hk_main_wrap .docs-tooltip{
+    padding: 12px 24px;
+}
+.img-preview {
+    float: left;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+}
+
+#hk_cropper_outer_wrap .docs-jumbotron{
+    background: #0074d9;color: #fff
+}
+#hk_cropper_outer_wrap .hk_version, #hk_cropper_outer_wrap .title_tag, #hk_cropper_outer_wrap .hk_lead{
+    color: #fff
+}
+#hk_cropper_outer_wrap .hk_space{
+    margin-bottom: 50px;    
+}
+#hk_cropper_outer_wrap .space_more_90{
+    margin-bottom: 90px;
+}
+
+#hk_cropper_outer_wrap .img_preview_one{
+    width: 256px; height: 144px;
+}
+#hk_cropper_outer_wrap .img_preview_two{
+    width: 128px; height: 72px;
+}
+
+#hk_cropper_outer_wrap .img_preview_three{
+    width: 64px; height: 36px;
+}
+
+#hk_cropper_outer_wrap .img_preview_four{
+    width: 32px; height: 18px;
+}
+
+#hk_cropper_outer_wrap .hk_space_15{
+    margin-bottom: 15px;
+}
+#hk_cropper_outer_wrap .hk_space_15_top{
+    margin-top: 15px;
+}
+
+#hk_cropper_outer_wrap .hk_left_0{
+    margin-left: 0;
+}
+
+#hk_cropper_outer_wrap .hk_btn_upload{
+    margin-top: 35px;
+}
+
+#hk_cropper_outer_wrap .hk_display_none{
+    display: none;
+}
+
+#hk_cropper_outer_wrap .myButton {
+    -moz-box-shadow: 3px 4px 0px 0px #1564ad;
+    -webkit-box-shadow: 3px 4px 0px 0px #1564ad;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #29639e 100%);
+    background-color: #79bbff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+#hk_cropper_outer_wrap .myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+    background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+    background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+    background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+    background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+    background-color:#378de5;
+}
+#hk_cropper_outer_wrap .myButton:active {
+    position:relative;
+    top:1px;
+}
+
+#hk_cropper_outer_wrap .hk_align_center  {
+  text-align: center;
+}
+
+
+#hk_cropper_outer_wrap .hk_margin_top_cls  {
+ margin-top:35px;
+}
