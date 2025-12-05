@@ -674,6 +674,12 @@
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
+  .gap-43 {
+    gap: calc(var(--spacing) * 43);
+  }
+  .gap-44 {
+    gap: calc(var(--spacing) * 44);
+  }
   .truncate {
     overflow: hidden;
     text-overflow: ellipsis;
